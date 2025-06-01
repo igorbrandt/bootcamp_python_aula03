@@ -3,16 +3,13 @@
 # que todos os registros tenham valores positivos para `quantidade` e `preço`. 
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
-
 try:
     quantidade = int(input("Digite a quantidade: "))
     preco = float(input("Digite o preço: "))
-    if quantidade < 0:
-        print("Dados inválidos.")
-    elif preco < 0:
-        print("Dados inválidos.")
+    if quantidade > 0 and preco > 0:
+        print("Dádos válidos.")
     else:
-        print("Dados válidos.")
+        print("Dados inválidos.")
 except ValueError as e:
     print(f"Erro: {e}")
     
@@ -20,6 +17,8 @@ except ValueError as e:
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+
+
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 

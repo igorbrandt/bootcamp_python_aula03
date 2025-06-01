@@ -1,5 +1,6 @@
  # bootcamp_python_aula03
 
+## IF
  ### Exercício 1: Verificação de Qualidade de Dados
  Você está analisando um conjunto de dados de vendas e precisa garantir 
  que todos os registros tenham valores positivos para `quantidade` e `preço`. 
@@ -10,6 +11,9 @@
  Imagine que você está trabalhando com dados de sensores IoT. 
  Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
  como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+ Temperatura < 18°C é 'Baixa'
+ Temperatura >= 18°C e <= 26°C é 'Normal'
+ Temperatura > 26°C é 'Alta'
 
  ### Exercício 3: Filtragem de Logs por Severidade
  Você está analisando logs de uma aplicação e precisa filtrar mensagens 
@@ -29,6 +33,7 @@
  a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
  Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
 
+## FOR
  ### Exercício 6. Contagem de Palavras em Textos
  Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
@@ -44,7 +49,7 @@
  ### Exercício 10. Agregação de Dados por Categoria
  Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 
- ### Exercícios com WHILE
+## WHILE
 
  ### Exercício 11. Leitura de Dados até Flag
  Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
