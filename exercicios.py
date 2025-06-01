@@ -17,9 +17,24 @@ except ValueError as e:
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+# Temperatura < 18°C é 'Baixa'
+# Temperatura >= 18°C e <= 26°C é 'Normal'
+# Temperatura > 26°C é 'Alta'
+while True:
+    try:
+        temperatura = float(input("Digite a tempertura: "))
+    except ValueError:
+        print("Digite um valor para a temperatura")
+        continue
 
-
-
+    if temperatura < 18:
+        print("Temperatura baixa")
+    elif 18 <= temperatura <= 26:
+        print("Temperatura normal")
+    else:
+        print("Temperatura alta")
+    break
+    
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
