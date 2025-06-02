@@ -109,12 +109,35 @@ print(contagem_palavras)
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+numeros = [10, 20, 30, 40, 50]
+minimo = min(numeros)
+maximo = max(numeros)
+normalizados = [(x - minimo) / (maximo - minimo) for x in numeros]
+print(normalizados)
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+usuarios_incompletos = []
+dados_usuarios = [
+    {"nome" : "igor", "idade" : "29"},
+    {"nome" : "pedro","idade" : "62"},
+    {"nome" : "roberto","idade" : ""}
+]
+for usuario in dados_usuarios:
+    if usuario["nome"] == "" or usuario["idade"] == "":
+          usuarios_incompletos.append(usuario)
+    else:
+        pass
+print(usuarios_incompletos)
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
+numeros = [1, 2, 3, 4, 99, 555, 786, -2, -1, 0]
+numeros_pares = []
+for numero in numeros:
+    if numero % 2 == 0:
+        numeros_pares.append(numero)
+print(numeros_pares)     
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
