@@ -158,12 +158,24 @@ print(total_por_categoria)
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+entrada = ""
+while entrada.lower() != 'sair':
+    entrada = input("Digite uma palavra. Para encerrar o programa, digite 'sair': ")
+    continue
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+n = int(input("Digite um número de 1 a 10: "))
+
+while n not in range(1, 10):
+    print("Número fora do intervalo.")
+    n = int(input("Tente novamente: "))
+
+print("Número válido.")
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+
 
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
