@@ -86,9 +86,26 @@ print(f"Idade: {idade}, Email: {email}")
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+transacoes = [{"valor": 12000, "hora": 20},
+            {"valor": 9000, "hora": 18}]
+for transacao in transacoes:
+    if transacao["valor"] > 10000 or transacao["hora"] < 9 or transacao["hora"] > 18:
+        print("Transação suspeita.")
+    else:
+        print("Transação normal.")
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+texto = "Fui ao mercado comprar banana, mas não tinha banana no mercado"
+novo_texto = texto.replace(",","")
+palavras = novo_texto.split(" ")
+contagem_palavras = {} 
+for palavra in palavras:
+    if palavra in contagem_palavras:
+        contagem_palavras[palavra] += 1
+    else:
+        contagem_palavras[palavra] = 1
+print(contagem_palavras)
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
