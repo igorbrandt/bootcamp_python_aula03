@@ -175,10 +175,53 @@ print("Número válido.")
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+pagina_atual = 1
+total_de_paginas = 5
 
+while pagina_atual <= total_de_paginas:
+    print(f"Processando página {pagina_atual} de {total_de_paginas}")
+    ## código que processa os dados da pagina_atual
+    pagina_atual += 1
+
+print("Totas as páginas foram processadas.")
 
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+NUMERO_SECRETO = 2
+LIMITE_TENTATIVAS = 3
+tentativa = 1
+
+while tentativa <= LIMITE_TENTATIVAS:
+    try:
+        print(f"Tentativa {tentativa} de {LIMITE_TENTATIVAS}")
+        entrada = int(input("Digite o número secreto: "))
+        if entrada == NUMERO_SECRETO: # supondo que a conexão foi bem-sucedida
+            print("Conectado com sucesso.")
+            break
+        else: 
+            tentativa += 1
+            continue
+    except ValueError:
+        print("Digite um número.")
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+# solução com FOR
+lista = [1, 3, 8, 9, "parar", 78, 66, 546]
+for i in lista:
+    if i == "parar":
+        print("'parar' encontrado. Encerrando programa...")
+        break
+    print(f"Processando item {i}")
+
+# solução com WHILE
+lista = [1, 3, 8, 9, "parar", 78, 66, 546]
+i = 0
+while i < len(lista):
+    if lista[i] == "parar":
+        print("'parar' encontrado. Encerrando programa...")
+        break
+    else:
+        print(f"Processando item número {i} de {len(lista)}")
+        i += 1
